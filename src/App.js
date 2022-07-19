@@ -15,8 +15,8 @@ function App() {
           <Route path="/" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
             <Route path="/apply" element={<Apply />} />
-            <Route path="*" element={<NoPage />} />
-            </Route>
+          </Route>
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
     </>

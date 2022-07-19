@@ -4,7 +4,9 @@ const Dashboard = () => {
   return (
     <div className="content">
       <div className="content-top">
-        <h1>Dashboard</h1>
+        <div className="content-main">
+          <h1>Dashboard</h1>
+        </div>
         <div className="content-right">
           <div className="user-profile">
             Sabin Prajapati
