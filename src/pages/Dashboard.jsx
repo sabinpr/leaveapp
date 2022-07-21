@@ -1,5 +1,10 @@
 import React from 'react';
-
+const toggle = () => {
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active');
+  var popup = document.getElementById('popup');
+  popup.classList.toggle('active');
+}
 const Dashboard = () => {
   return (
     <div className="content">
@@ -40,7 +45,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
@@ -48,7 +53,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
@@ -56,7 +61,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
               <tr>
                 <th scope="row">4</th>
@@ -64,7 +69,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
               <tr>
                 <th scope="row">5</th>
@@ -72,7 +77,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
               <tr>
                 <th scope="row">6</th>
@@ -80,7 +85,7 @@ const Dashboard = () => {
                 <td>10 July-12 July</td>
                 <td>Full Day</td>
                 <td>Approved</td>
-                <td>View</td>
+                <td><a className='view-details' href='#' onClick={toggle}>View</a></td>
               </tr>
             </tbody>
           </table>
