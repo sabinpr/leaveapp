@@ -1,58 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FormFull } from '../components/FormFull';
 import { FormHalf } from '../components/FormHalf';
+import UserProfile from '../components/UserProfile';
 const Apply = () => {
   return (
-    <div className="content">
-      <div className="content-main">
+    <>
+      <div className='content-header'>
         <h1>Apply for Leave</h1>
-        <div className='content-info'>
-          <div className='content-info-type'>
-            <div className='leave-types'>
-              <div className='leave-par1'>
-                02
-              </div>
-              Pending Leaves
-
+        <UserProfile />
+      </div>
+      <div className="content">
+        <div className="content-main">
+          <div className='content-form'>
+            <div className='form-type'>
+              <ul className="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="#tab-01" className='active' aria-controls="tab-01" role="tab" data-toggle="tab">Full Day Leave</a></li>
+                <li role="presentation"><a href="#tab-02" aria-controls="tab-02" role="tab" data-toggle="tab">Half Day Leave</a></li>
+              </ul>
             </div>
-            <div className='leave-types'>
-              <div className='leave-types-border'>
-                <div className='leave-par2'>
-                  06
-                </div>
-                Approved Leaves
+            <div class="tab-content">
+              <div role="tabpanel" className="tab-pane active" id="tab-01">
+                <FormFull />
               </div>
-            </div>
-            <div className='leave-types'>
-              <div className='leave-par3'>
-                03
+              <div role="tabpanel" className="tab-pane" id="tab-02">
+                <FormHalf />
               </div>
-              Rejected Leaves
             </div>
           </div>
         </div>
-        <div className='content-form'>
-          <h2>Leave Application</h2>
-          <div className='form-type'>
-            <ul>
-              <li><Link to='/apply'>Full Day Leave</Link></li>
-              <li><Link to='/apply'>Half Day Leave</Link></li>
-            </ul>
-          </div>
-          <FormFull/>
-          <FormHalf/>
-        </div>
-      </div>
-      <div className="content-right">
-        <div className="user-profile">
-          Sabin Prajapati
-        </div>
-        <div className="todays-leave">
 
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 
