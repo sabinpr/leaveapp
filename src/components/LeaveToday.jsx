@@ -12,7 +12,7 @@ const LeaveToday = () => {
                 <ul>
                     <li>
                         <div className='user-profile-pic'>
-                            <img src={pp1}></img>
+                            <img src={pp1} alt='user'></img>
                         </div>
                         <div className='user-profile-description'>
                             <p className='user-profile-name'>Emma Smith</p>
@@ -21,7 +21,7 @@ const LeaveToday = () => {
                     </li>
                     <li>
                         <div className='user-profile-pic'>
-                            <img src={pp2}></img>
+                            <img src={pp2} alt='user'></img>
                         </div>
                         <div className='user-profile-description'>
                             <p className='user-profile-name'>Emma Smith</p>
@@ -30,7 +30,7 @@ const LeaveToday = () => {
                     </li>
                     <li>
                         <div className='user-profile-pic'>
-                            <img src={pp3}></img>
+                            <img src={pp3} alt='user'></img>
                         </div>
                         <div className='user-profile-description'>
                             <p className='user-profile-name'>Emma Smith</p>
@@ -39,7 +39,43 @@ const LeaveToday = () => {
                     </li>
                     <li>
                         <div className='user-profile-pic'>
-                            <img src={pp4}></img>
+                            <img src={pp4}  alt='user'></img>
+                        </div>
+                        <div className='user-profile-description'>
+                            <p className='user-profile-name'>Emma Smith</p>
+                            <p className='user-profile-post'>Software Engineer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className='user-profile-pic'>
+                            <img src={pp1}  alt='user'></img>
+                        </div>
+                        <div className='user-profile-description'>
+                            <p className='user-profile-name'>Emma Smith</p>
+                            <p className='user-profile-post'>Software Engineer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className='user-profile-pic'>
+                            <img src={pp2} alt='user'></img>
+                        </div>
+                        <div className='user-profile-description'>
+                            <p className='user-profile-name'>Emma Smith</p>
+                            <p className='user-profile-post'>Software Engineer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className='user-profile-pic'>
+                            <img src={pp3} alt='user'></img>
+                        </div>
+                        <div className='user-profile-description'>
+                            <p className='user-profile-name'>Emma Smith</p>
+                            <p className='user-profile-post'>Software Engineer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className='user-profile-pic'>
+                            <img src={pp4} alt='user'></img>
                         </div>
                         <div className='user-profile-description'>
                             <p className='user-profile-name'>Emma Smith</p>

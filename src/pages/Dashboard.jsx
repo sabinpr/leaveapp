@@ -4,8 +4,8 @@ import toggle1 from '../components/Toggle1';
 import toggle2 from '../components/Toggle2';
 import toggle3 from '../components/Toggle3';
 import toggle4 from '../components/Toggle4';
-import toggle5 from '../components/Toggle5';
-import toggle6 from '../components/Toggle6';
+// import toggle5 from '../components/Toggle5';
+// import toggle6 from '../components/Toggle6';
 import UserProfile from '../components/UserProfile';
 
 const Dashboard = () => {

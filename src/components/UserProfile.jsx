@@ -4,7 +4,7 @@ const UserProfile = () => {
     return (
         <div className="user-profile">
             <div className='user-profile-pic'>
-                <img src={pp1}></img>
+                <img src={pp1} alt='user'></img>
             </div>
             <div className='user-profile-description'>
                 <p className='user-profile-name'>Emma Smith</p>

@@ -24,6 +24,15 @@ const LeaveReminder = () => {
                             <p className='reminder-days-togo'>3 days to go</p>
                         </div>
                     </li>
+                    <li className='reminder-list-components'>
+                        <i class='bx bxs-circle bx-blue'></i>
+                        <div>
+                            <h4>Annual Leave</h4>
+                            <p className='reminder-date'>07/05/2022 - 09/05/2022</p>
+                            <p className='reminder-leave-type'>Full Day</p>
+                            <p className='reminder-days-togo'>3 days to go</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

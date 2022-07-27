@@ -31,7 +31,7 @@ const Login = () => {
                                 <input class="form-check-input" type="checkbox" id="check1" name="logedin" value="something" />
                                 <label class="form-check-label">Keep me logged in</label>
                                 <p className="forgot-password text-right mt-2">
-                                    Forgot <Link to="/">password?</Link>
+                                    <Link to="/">Forgot password?</Link>
                                 </p>
                             </div>
 
