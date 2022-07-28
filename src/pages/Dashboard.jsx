@@ -1,14 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactPaginate from 'react-paginate';
 import Cards from '../components/Cards';
 import toggle1 from '../components/Toggle1';
 import toggle2 from '../components/Toggle2';
 import toggle3 from '../components/Toggle3';
 import toggle4 from '../components/Toggle4';
-// import toggle5 from '../components/Toggle5';
-// import toggle6 from '../components/Toggle6';
+import toggle5 from '../components/Toggle5';
+import toggle6 from '../components/Toggle6';
 import UserProfile from '../components/UserProfile';
+import LeaveData from '../Data/LeaveData.json';
 
 const Dashboard = () => {
+  const [datas] = useState(LeaveData.slice(0,12));
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const datasPerPage = 4
+  const pagesVisited = pageNumber * datasPerPage
+
+  const displayDatas = datas
+    .slice(pagesVisited, pagesVisited + datasPerPage)
+    .map((data) => {
+      let toggle
+      let statusClass
+      if (data.timerange === "Full Day") {
+        if (data.status === "Pending") {
+          toggle = toggle2
+          statusClass = "status-pending"
+        }
+        else if (data.status === "Approved"){
+          toggle = toggle4
+          statusClass = "status-accepted"
+        }
+        else{
+          toggle = toggle6
+          statusClass = "status-rejected"
+        }
+      } else {
+        if (data.status === "Pending") {
+          toggle = toggle1
+          statusClass = "status-pending"
+        }
+        else if (data.status === "Approved"){
+          toggle = toggle3
+          statusClass = "status-accepted"
+        }
+        else{
+          toggle = toggle5
+          statusClass = "status-rejected"
+        }
+      }
+      return (
+        
+        <tr >
+          <td>{data.sn}</td>
+          <td>{data.leavetype}</td>
+          <td>{data.from}</td>
+          <td>{data.to}</td>
+          <td>{data.timerange}</td>
+          <td><span className={statusClass}>{data.status}</span></td>
+          <td><a className='view-details' href='/#' onClick={toggle}>View</a></td>
+        </tr>
+      );
+    });
+
+  const pageCount = Math.ceil(datas.length / datasPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected)
+  }
+
   return (
     <>
       <div className='content-header'>
@@ -25,8 +85,8 @@ const Dashboard = () => {
           <div className="content-bottom">
             <h2>Leave Balance</h2>
             <div className="table-wrapper">
-              <table className="table">
-                <thead className="thead">
+              <table className="table borderless">
+                <thead>
                   <tr>
                     <th scope="col">SN</th>
                     <th scope="col">Leave Type</th>
@@ -38,62 +98,22 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr >
-                    <th scope="row">1</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>-</td>
-                    <td>Full Day</td>
-                    <td>Pending</td>
-                    <td><a className='view-details' href='/#' onClick={toggle1}>View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>12 July</td>
-                    <td>Full Day</td>
-                    <td>Pending</td>
-                    <td><a className='view-details' href='/#' onClick={toggle2}>View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>-</td>
-                    <td>Full Day</td>
-                    <td>Approved</td>
-                    <td><a className='view-details' href='/#' onClick={toggle3}>View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>12 July</td>
-                    <td>Full Day</td>
-                    <td>Approved</td>
-                    <td><a className='view-details' href='/#' onClick={toggle4}>View</a></td>
-                  </tr>
-                  {/* <tr>
-                    <th scope="row">5</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>12 July</td>
-                    <td>Full Day</td>
-                    <td>Approved</td>
-                    <td><a className='view-details' href='/#' onClick={toggle5}>View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Sick Leave</td>
-                    <td>10 July</td>
-                    <td>12 July</td>
-                    <td>Full Day</td>
-                    <td>Approved</td>
-                    <td><a className='view-details' href='/#' onClick={toggle6}>View</a></td>
-                  </tr> */}
+                  {displayDatas}
+
                 </tbody>
+
               </table>
+              <ReactPaginate
+                previousLabel={"< Prev"}
+                nextLabel={"Next >"}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"pagination-bttns"}
+                previousLinkClassName={"previous-bttn"}
+                nextLinkClassName={"next-bttn"}
+                disabledClassName={"pagination-disabled"}
+                activeClassName={"pagination-active"}
+              />
             </div>
           </div>
         </div>

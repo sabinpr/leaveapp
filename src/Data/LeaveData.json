@@ -1,0 +1,98 @@
+[
+    {
+        "sn": 1,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "12 july",
+        "timerange": "Full Day",
+        "status": "Pending"
+    },
+    {
+        "sn": 2,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Pending"
+    },
+    {
+        "sn": 3,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "12 july",
+        "timerange": "Full Day",
+        "status": "Approved"
+    },
+    {
+        "sn": 4,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Approved"
+    },
+    {
+        "sn": 5,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "12 july",
+        "timerange": "Full Day",
+        "status": "Rejected"
+    },
+    {
+        "sn": 6,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Rejected"
+    },
+    {
+        "sn": 7,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "12 july",
+        "timerange": "Full Day",
+        "status": "Approved"
+    },
+    {
+        "sn": 8,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Pending"
+    },
+    {
+        "sn": 9,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "12 july",
+        "timerange": "Full Day",
+        "status": "Approved"
+    },
+    {
+        "sn": 10,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Pending"
+    },
+    {
+        "sn": 11,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Pending"
+    },
+    {
+        "sn": 12,
+        "leavetype": "Sick Leave",
+        "from": "10 July",
+        "to": "-",
+        "timerange": "Half Day",
+        "status": "Pending"
+    }
+]

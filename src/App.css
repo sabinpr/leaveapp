@@ -108,7 +108,7 @@ h2 {
     font-size: 16px;
 }
 
-.user-logout  {
+.user-logout {
     position: absolute;
     bottom: 20px;
     font-family: 'Montserrat';
@@ -161,7 +161,7 @@ h2 {
     margin-right: 40px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .content-bottom table {
@@ -170,15 +170,11 @@ h2 {
 }
 
 .view-details {
-    padding: 4px;
-    background-color: #007bff;
-    color: #FFFFFF;
-    padding: 6px 10px;
-    border-radius: 6px;
+    font-weight: 700;
+    color: #1B4EA3;
 }
 
 .view-details:hover {
-    box-shadow: 0 0 2px 2px #007bff;
     text-decoration: none;
 }
 
@@ -295,6 +291,7 @@ label {
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
+    box-shadow: 0 0 5px #19191D;
 }
 
 #popup1.active,
@@ -904,4 +901,98 @@ h4 {
     font-size: 12px;
     line-height: 15px;
     color: #808080;
+}
+
+.pagination-bttns {
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-bttns a {
+    padding: 5px 10px;
+    gap: 10px;
+    width: 26px;
+    height: 27px;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #212121;
+    cursor: pointer;
+}
+
+.pagination-bttns a:hover {
+    text-decoration: none;
+    color: #808080;
+}
+
+.previous-bttn {}
+
+.next-bttn {}
+
+.pagination-disabled {}
+
+.pagination-active a {
+    background: #DFEDFB;
+}
+
+.borderless td,
+.borderless th,
+.borderless thead tr th {
+    border: none;
+}
+
+.borderless tr {
+    border-bottom: 2px solid #EEEEEE;
+}
+
+.borderless th {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #212121;
+}
+
+.borderless td {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #212121;
+}
+
+.status-accepted,
+.status-pending,
+.status-rejected {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-accepted {
+    color: #1F9254;
+    background: #EBF9F1;
+}
+
+.status-pending {
+    color: #CD6200;
+    background: #FEF2E5;
+}
+
+.status-rejected {
+    color: #A30D11;
+    background: #FBE7E8;
 }
