@@ -39,7 +39,7 @@ export const FormHalf = () => {
         </div>
         <div className='button1'>
           <input className='apply' type={'submit'} value='Apply'></input>
-          <input className='cancel' type={'submit'} value='Cancel'></input>
+          <input className='cancel' type={'reset'} value='Cancel'></input>
         </div>
       </form>
     </div>
