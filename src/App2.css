@@ -1,24 +1,25 @@
-@media (max-width:900px){
-    form .leave-form .input-box ,.leave-form .select-time{
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    .leave-form .select-time .time-category{
-        width: 90%;
-    }
-    .content-right{
-        visibility: hidden;
-    }
-    .content{
-        width: calc(100% - 220px);
-    }
-    form .button1{
-        min-width: 100%;
-        margin-bottom: 50px;
-
-    }
-    form .button1 input{
-        min-width: 100%;
-        margin-bottom: 5px;
-    }
+@media (max-width: 954px) {
+  form .leave-form .input-box,
+  form .leave-form select,
+  .leave-form .select-time {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .leave-form .select-time .time-category {
+    width: 90%;
+  }
+  .content-right {
+    visibility: hidden;
+  }
+  .content {
+    width: calc(100% - 220px);
+  }
+  form .button1 {
+    min-width: 100%;
+    margin-bottom: 50px;
+  }
+  form .button1 input {
+    min-width: 100%;
+    margin-bottom: 5px;
+  }
 }
