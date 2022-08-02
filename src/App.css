@@ -481,13 +481,15 @@ label {
   margin: 0;
 }
 
-form .leave-form .input-box {
-  margin-bottom: 38px;
-  width: calc(100% / 2 - 15px);
+form .leave-form .input-box,
+form .leave-form .input-file {
+  margin-bottom: 28px;
+  width: calc(100% / 3 - 15px);
 }
 .leave-form .input-box input,
 .leave-form .reason-field textarea,
-.leave-form .input-box select {
+.leave-form .input-box select,
+.leave-form .input-file input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -495,6 +497,17 @@ form .leave-form .input-box {
   line-height: 20px;
   text-align: justify;
   color: #212121;
+}
+.leave-form .input-file input::file-selector-button {
+  height: 45px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  padding: 0 10px;
+  background-color: #ffffff;
 }
 .leave-form .select-type {
   margin-bottom: 15px;
@@ -507,6 +520,7 @@ form .leave-form .reason-field {
 
 .leave-form .reason-field .details,
 .leave-form .input-box .details,
+.leave-form .input-file .details,
 .leave-form .select-type .details {
   display: block;
   font-family: "Montserrat";

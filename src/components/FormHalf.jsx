@@ -6,7 +6,7 @@ export const FormHalf = () => {
       <form action="#">
         <div className="leave-form">
           <div className="select-type">
-            <input type={"radio"} name="type" id="dot-7"required></input>
+            <input type={"radio"} name="type" id="dot-7" required></input>
             <input type={"radio"} name="type" id="dot-8"></input>
             <input type={"radio"} name="type" id="dot-9"></input>
             <input type={"radio"} name="type" id="dot-10"></input>
@@ -59,6 +59,15 @@ export const FormHalf = () => {
               <option value="Annual Leave">First Half</option>
               <option value="Sick Leave">Second Half</option>
             </select>
+          </div>
+          <div className="input-file">
+            <span className="details">Upload File</span>
+            <input
+              type="file"
+              id="myFile"
+              name="filename"
+              accept="image/*, application/pdf"
+            />
           </div>
           <div className="reason-field">
             <span className="details">Reason</span>
