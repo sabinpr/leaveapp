@@ -1,13 +1,13 @@
-import './App.css';
-import './App2.css';
-import React from 'react';
+import "./App.css";
+import "./App2.css";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./pages/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Apply from "./pages/Apply";
 import NoPage from "./pages/NoPage";
 import Login from "./pages/Login";
-import Profile from './pages/Profile';
+import Profile from "./pages/Profile";
 function App() {
   return (
     <>
@@ -27,4 +27,3 @@ function App() {
 }
 
 export default App;
-
