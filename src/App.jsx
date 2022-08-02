@@ -1,5 +1,6 @@
 import "./App.css";
 // import "./App2.css";
+import "./App2.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./pages/Sidebar";
