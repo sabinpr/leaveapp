@@ -1034,3 +1034,8 @@ h4 {
   color: #a30d11;
   background: #fbe7e8;
 }
+
+.register-form{
+  max-width: 500px;
+  border: 1px solid;
+}
