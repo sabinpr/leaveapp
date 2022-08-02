@@ -181,8 +181,11 @@ h2 {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
 }
-
+.Auth-form-container::-webkit-scrollbar{
+  width: 0;
+}
 .Auth-form {
   width: 420px;
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
@@ -429,8 +432,13 @@ label {
 
 .nav a {
   text-decoration: none;
-  color: #b8b8b8;
-  padding-bottom: 10px;
+  color: #646464;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0 10px 13px 10px;
 }
 
 .nav .active {
@@ -474,8 +482,19 @@ label {
 }
 
 form .leave-form .input-box {
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 40px);
+  margin-bottom: 38px;
+  width: calc(100% / 2 - 15px);
+}
+.leave-form .input-box input,
+.leave-form .reason-field textarea,
+.leave-form .input-box select {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: justify;
+  color: #212121;
 }
 .leave-form .select-type {
   margin-bottom: 15px;
@@ -592,13 +611,11 @@ form .button1 {
   min-width: 370px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 form .button1 input {
-  height: 100%;
-  width: calc(100% / 2 - 15px);
-  min-width: 170px;
+  height: 44px;
+  width: 112px;
   outline: none;
   border-color: #d9d9d9;
   border-radius: 5px;
@@ -606,6 +623,7 @@ form .button1 input {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
+  margin-right: 20px;
 }
 
 form .button1 .cancel {
@@ -851,7 +869,7 @@ h4 {
   padding: 20px 27px 26px 12px;
   gap: 10px;
   width: 228px;
-  height: 340px;
+  height: 360px;
 
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(56, 95, 171, 0.05);

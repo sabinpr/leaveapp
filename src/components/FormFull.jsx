@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export const FormFull = () => {
   return (
-    <div className='form-container'>
-      <form action='#'>
-        <div className='leave-form'>
-        <div className="select-type">
-            <input type={"radio"} name="type" id="dot-1"></input>
+    <div className="form-container">
+      <form action="#">
+        <div className="leave-form">
+          <div className="select-type">
+            <input type={"radio"} name="type" id="dot-1" required></input>
             <input type={"radio"} name="type" id="dot-2"></input>
             <input type={"radio"} name="type" id="dot-3"></input>
             <input type={"radio"} name="type" id="dot-4"></input>
@@ -42,24 +42,24 @@ export const FormFull = () => {
               </label>
             </div>
           </div>
-          <div className='input-box'>
-            <span className='details'>From</span>
-            <input type={'date'} required></input>
+          <div className="input-box">
+            <span className="details">From</span>
+            <input type={"date"} required></input>
           </div>
-          <div className='input-box'>
-            <span className='details'>To</span>
-            <input type={'date'}></input>
+          <div className="input-box">
+            <span className="details">To</span>
+            <input type={"date"}></input>
           </div>
-          <div className='reason-field'>
-            <span className='details'>Reason</span>
+          <div className="reason-field">
+            <span className="details">Reason</span>
             <textarea required></textarea>
           </div>
         </div>
-        <div className='button1'>
-          <input className='apply' type={'submit'} value='Apply'></input>
-          <input className='cancel' type={'reset'} value='Cancel'></input>
+        <div className="button1">
+          <input className="apply" type={"submit"} value="Apply"></input>
+          <input className="cancel" type={"reset"} value="Cancel"></input>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};

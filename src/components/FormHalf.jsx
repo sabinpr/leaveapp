@@ -6,7 +6,7 @@ export const FormHalf = () => {
       <form action="#">
         <div className="leave-form">
           <div className="select-type">
-            <input type={"radio"} name="type" id="dot-7"></input>
+            <input type={"radio"} name="type" id="dot-7"required></input>
             <input type={"radio"} name="type" id="dot-8"></input>
             <input type={"radio"} name="type" id="dot-9"></input>
             <input type={"radio"} name="type" id="dot-10"></input>

@@ -8,12 +8,14 @@ import Apply from "./pages/Apply";
 import NoPage from "./pages/NoPage";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Register from "./pages/Register";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
             <Route path="apply" element={<Apply />} />
