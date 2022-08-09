@@ -183,7 +183,7 @@ h2 {
   height: 100vh;
   overflow-y: scroll;
 }
-.Auth-form-container::-webkit-scrollbar{
+.Auth-form-container::-webkit-scrollbar {
   width: 0;
 }
 .Auth-form {
@@ -489,7 +489,8 @@ form .leave-form .input-file {
 .leave-form .input-box input,
 .leave-form .reason-field textarea,
 .leave-form .input-box select,
-.leave-form .input-file input {
+.leave-form .input-file input,
+.user-form .user-input-box input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -506,7 +507,7 @@ form .leave-form .input-file {
   font-size: 16px;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
-  padding: 0 10px;
+  padding: 0 15px;
   background-color: #ffffff;
 }
 .leave-form .select-type {
@@ -521,7 +522,8 @@ form .leave-form .reason-field {
 .leave-form .reason-field .details,
 .leave-form .input-box .details,
 .leave-form .input-file .details,
-.leave-form .select-type .details {
+.leave-form .select-type .details,
+.user-form .user-input-box .details {
   display: block;
   font-family: "Montserrat";
   font-style: normal;
@@ -533,8 +535,9 @@ form .leave-form .reason-field {
 }
 
 .leave-form .input-box input,
-.leave-form .input-box select {
-  height: 45px;
+.leave-form .input-box select,
+.user-form .user-input-box input {
+  height: 44px;
   width: 100%;
   outline: none;
   border-radius: 5px;
@@ -564,7 +567,7 @@ form .leave-form .reason-field {
 .leave-form .input-box input:valid,
 .leave-form .input-box select:focus,
 .leave-form .input-box select:valid {
-  border-color: #9b59b6;
+  border-color: #1B4EA3;
 }
 
 .leave-form .select-type .type-category {
@@ -618,7 +621,7 @@ form input[type="radio"] {
   display: none;
 }
 
-form .button1 {
+.form-container form .button1 {
   height: 45px;
   margin: 45px 0 0 0;
   width: calc(50% / 2);
@@ -626,7 +629,14 @@ form .button1 {
   display: flex;
   flex-wrap: wrap;
 }
-
+.user-form-container form .button1 {
+  height: 45px;
+  margin: 20px 0 0 0;
+  width: calc(50% / 2);
+  min-width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+}
 form .button1 input {
   height: 44px;
   width: 112px;
@@ -1049,7 +1059,63 @@ h4 {
   background: #fbe7e8;
 }
 
-.register-form{
+.register-form {
   max-width: 500px;
   border: 1px solid;
+}
+
+.user-container {
+  margin-top: 24px;
+  padding: 30px 72px;
+  width: calc(100% - 44px);
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.profile-pic-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.profile-pic {
+  height: 160px;
+  width: 120px;
+}
+.profile-pic img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.profile-pic ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+.profile-pic ul li {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #646464;
+}
+.user-form-container {
+  padding: 25px 0 0 0;
+}
+.user-form-container form .user-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+form .user-form .user-input-box {
+  margin-bottom: 25px;
+  width: calc(100% / 2 - 15px);
+}
+.user-input-box input:read-only {
+  background-color: #f8f8f8 !important;
 }
