@@ -29,7 +29,7 @@ const Sidebar = () => {
           </div>
           <ul className="nav-list">
             <li>
-              <NavLink exact activeClassName="active" to="/">
+              <NavLink exact activeClassName="active" to="/dashboard">
                 <i className="bx bxs-dashboard"></i>
                 <span className="links-name">Dashboard</span>
               </NavLink>

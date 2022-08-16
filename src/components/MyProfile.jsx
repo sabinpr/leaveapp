@@ -3,7 +3,7 @@ import { useState } from "react";
 import imgemma from "../images/imgemma.svg";
 
 const MyProfile = () => {
-    const [state, setState] = useState({
+    const [state] = useState({
         firstName: "Emma",
         lastName: "Smith",
         email: "emma.smith@test.com",
