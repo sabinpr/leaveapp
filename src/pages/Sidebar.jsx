@@ -47,7 +47,7 @@ const Sidebar = () => {
               </NavLink>
             </li>
           </ul>
-          <Link to="/login" onClick={handleChange}>
+          <Link to="/" onClick={handleChange}>
             <div className="user-logout">
               <i class="bx bx-log-out"></i>
               <b>

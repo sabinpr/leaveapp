@@ -9,15 +9,18 @@ import Apply from "./pages/Apply";
 import NoPage from "./pages/NoPage";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Register from "./pages/Register";
+// import Register from "./pages/Register";
+import Registration from "./pages/Registration";
+import Roles from "./components/Roles";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Sidebar />}>
+          <Route path="/" element={<Login />} />
+          <Route path="/roles" element={<Roles />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/welcome" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
             <Route path="apply" element={<Apply />} />
             <Route path="profile" element={<Profile />} />
