@@ -1,75 +1,63 @@
-import React from "react";
-import { useFormik } from "formik";
-import { registerSchema } from "../schemas/userRegistrationSchema";
-import "../App.css";
-//Submit Function
-const onSubmit = async (values, actions) => {
-  // console.log("Submitted");
-  actions.resetForm();
-};
-
-// eslint - disable - next - line;
-const onReset = async () => {};
+import { Formik, Form } from "formik";
+import TextField from "../components/TextField";
+import * as Yup from "yup";
 
 const Register = () => {
-  const {
-    values,
-    errors,
-    touched,
-    isSubmitting,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-    handleReset,
-  } = useFormik({
-    initialValues: {
-      firstName: "",
-      middleName: "",
-      lastName: "",
-      address: "",
-      phone: "",
-      email: "",
-      password: "",
-      gender: "",
-      dob: "",
-      role: "",
-      companyId: "",
-      designation: "",
-    },
-    validationSchema: registerSchema,
-    onSubmit,
+  const validate = Yup.object({
+    firstName: Yup.string()
+      .max(15, "Must be 15 characters or less")
+      .required("Required"),
+    lastName: Yup.string()
+      .max(20, "Must be 20 characters or less")
+      .required("Required"),
+    email: Yup.string()
+      .email("Email is invalid")
+      .required("Email is required"),
+    password: Yup.string()
+      .min(8, "Password must be at least 8 charaters")
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password"), null], "Password must match")
+      .required("Confirm password is required"),
   });
-  // console.log(formik);
-  console.log(errors);
   return (
-    <div className="form-background">
-      <div className="Auth-form-container">
-        <div className="d-flex flex-row">
-          <form
-            onSubmit={handleSubmit}
-            autoComplete="off"
-            className="Auth-form"
-            onReset={handleReset}
-          >
-            <div className="form-group mt-2 p-3">
-              <label htmlFor="firstName" className="form-label">
-                First Name
-              </label>
-              <input
-                value={values.firstName}
-                onChange={handleChange}
-                id="firstName"
-                type="text"
-                placeholder="Enter Your First Name"
-                className={
-                  errors.firstName && touched.firstName
-                    ? "form-control input-error"
-                    : "form-control"
-                }
-              />
-              {errors.firstName && touched.firstName && (
-                <p className="register-error">{errors.firstName}</p>
-              )}
+    <Formik
+      initialValues={{
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      }}
+      validationSchema={validate}
+      onSubmit={(values) => {
+        console.log(values);
+      }}
+    >
+      {(formik) => (
+        <div className="form-background">
+          <div className="Auth-form-container">
+            <div className="Auth-form">
+              <div className="Auth-form-content">
+                <h3 className="Auth-form-title">Register</h3>
+                <Form>
+                  <TextField label="First Name" name="firstName" type="text" />
+                  <TextField label="Last Name" name="lastName" type="text" />
+                  <TextField label="Email" name="email" type="email" />
+                  <TextField label="Password" name="password" type="password" />
+                  <TextField
+                    label="Confirm Password"
+                    name="confirmPassword"
+                    type="password"
+                  />
+                  <button className="btn btn-dark mt-3 mb-2 mr-3" type="submit">
+                    Register
+                  </button>
+                  <button className="btn btn-danger mt-3 mb-2" type="reset">
+                    Reset
+                  </button>
+                </Form>
+              </div>
             </div>
             <div className="form-group mt-2 p-3">
               <label htmlFor="middleName" className="form-label">
@@ -266,10 +254,10 @@ const Register = () => {
               </button>
               <button type="reset">Reset Form</button>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </Formik>
   );
 };
 

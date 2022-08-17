@@ -50,6 +50,15 @@ export const FormFull = () => {
             <span className="details">To</span>
             <input type={"date"}></input>
           </div>
+          <div className="input-file">
+            <span className="details">Upload File</span>
+            <input
+              type="file"
+              id="myFile"
+              name="filename"
+              accept="image/*, application/pdf"
+            />
+          </div>
           <div className="reason-field">
             <span className="details">Reason</span>
             <textarea required></textarea>
