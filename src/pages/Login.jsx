@@ -4,7 +4,6 @@ import { login } from "../components/auth/userApi";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  
   //DEFINING INITIAL STATE FOR FORM FIELDS
   const [credential, setCredential] = useState({
     email: "",

@@ -12,7 +12,7 @@ export const login = async (user, setCredentials, navigate) => {
       // console.log(res.data);
       //TO SAVE TOKEN DATA IN LOCAL STORAGE
       localStorage.setItem("token", res.data.token);
-      navigate("/");
+      navigate("/welcome");
     })
     .catch((error) => {
       if (error.response.data.msg) {
@@ -26,6 +26,15 @@ export const login = async (user, setCredentials, navigate) => {
         }, 3000);
       }
     });
+};
+
+//CHECK IF USER IS AUTHENTICATED AND TOKEN EXISTS
+export const isAuthenticated = () => {
+  if (localStorage.getItem("token")) {
+    return JSON.parse(localStorage.getItem("token"));
+  } else {
+    return false;
+  }
 };
 
 export const logout = async (navigate) => {

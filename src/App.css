@@ -631,7 +631,7 @@ form .leave-form .reason-field {
 }
 
 form input[type="radio"] {
-  display: none;
+  /* display: none; */
 }
 
 .form-container form .button1 {
@@ -1070,6 +1070,19 @@ h4 {
 .status-rejected {
   color: #a30d11;
   background: #fbe7e8;
+}
+
+/* CSS FOR FORMS IN USER REGISTRATION */
+input.input-error,
+select.input-error {
+  border-style: solid;
+  border-color: #a30d11;
+  border-width: 3px;
+}
+
+/* CSS FOR INPUT TYPE RADIO OF REGISTER PAGE */
+.input-radio-button {
+  display: flex !important;
 }
 
 .register-form {
