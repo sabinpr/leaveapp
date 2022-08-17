@@ -13,7 +13,7 @@ import Profile from "./pages/Profile";
 // import Register from "./pages/Register";
 import Registration from "./pages/Registration";
 import Roles from "./components/Roles";
-import Register from "./pages/Register";
+// import Register from "./pages/Register";
 import LeaveRequest from "./pages/LeaveRequest";
 import DashboardPm from "./pages/DashbooardPm";
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/register" element={<Registration />} />
-          <Route path="/welcome" element={<Sidebar />}>
+          <Route path="/dashboard" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
             <Route path="apply" element={<Apply />} />
             <Route path="profile" element={<Profile />} />
