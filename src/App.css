@@ -218,7 +218,7 @@ label {
 .form-background {
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  background: linear-gradient(120deg, #f0f0f0, #808080);
   height: 100vh;
   overflow: hidden;
 }
