@@ -12,7 +12,7 @@ export const login = async (user, setCredentials, navigate) => {
       // console.log(res.data);
       //TO SAVE TOKEN DATA IN LOCAL STORAGE
       localStorage.setItem("token", res.data.token);
-      navigate("/welcome");
+      navigate("/dashboard");
     })
     .catch((error) => {
       if (error.response.data.msg) {
@@ -37,6 +37,7 @@ export const isAuthenticated = () => {
   }
 };
 
+//SIGNOUT
 export const logout = async (navigate) => {
   localStorage.clear();
   navigate("/");
