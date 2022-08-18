@@ -29,19 +29,19 @@ const Sidebar = () => {
           </div>
           <ul className="nav-list">
             <li>
-              <NavLink exact activeClassName="active" to="/">
+              <NavLink exact={true} activeClassName="active" to="/dashboard" end>
                 <i className="bx bxs-dashboard"></i>
                 <span className="links-name">Dashboard</span>
               </NavLink>
             </li>
             <li>
-              <NavLink exact activeClassName="active" to="/apply">
+              <NavLink exact={true} activeClassName="active" to="/dashboard/apply">
                 <i class="bx bxs-pencil"></i>
                 <span className="links-name">Apply Leave</span>
               </NavLink>
             </li>
             <li>
-              <NavLink exact activeClassName="active" to="/profile">
+              <NavLink exact={true} activeClassName="active" to="/dashboard/profile">
                 <i class="bx bxs-user"></i>
                 <span className="links-name">My Profile</span>
               </NavLink>

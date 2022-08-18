@@ -29,27 +29,21 @@ const SidebarPm = () => {
                     </div>
                     <ul className="nav-list-pm">
                         <li>
-                            <NavLink exact activeClassName="active" to="/pm">
+                            <NavLink exact activeClassName="active" to="/admin" end>
                                 <i className="bx bxs-dashboard"></i>
                                 <span className="links-name">Dashboard</span>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink exact activeClassName="active" to="/pm/leave">
+                            <NavLink exact activeClassName="active" to="/admin/leave">
                                 <i class='bx bx-detail'></i>
                                 <span className="links-name">Leave Requests</span>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink exact activeClassName="active" to="/pm/apply">
+                            <NavLink exact activeClassName="active" to="/admin/add">
                                 <i class="bx bxs-pencil"></i>
-                                <span className="links-name">Apply Leave</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink exact activeClassName="active" to="/pm/profile">
-                                <i class="bx bxs-user"></i>
-                                <span className="links-name">My Profile</span>
+                                <span className="links-name">Add User</span>
                             </NavLink>
                         </li>
                     </ul>
@@ -63,7 +57,7 @@ const SidebarPm = () => {
                     </Link>
                 </div>
                 <Outlet />
-                <RightBar />
+                <RightBar />       
             </div>
             <div id="popup1">
                 <Popup1 />

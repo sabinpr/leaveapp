@@ -88,7 +88,7 @@ h2 {
 }
 
 .sidebar ul li a:hover {
-  color: brown;
+  color: #1b4ea3;
 }
 
 .nav-list .active,
@@ -180,14 +180,14 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
 }
 .Auth-form-container::-webkit-scrollbar {
   width: 0;
 }
-.Auth-form {
+.form-background .Auth-form {
   width: 420px;
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
   padding-top: 30px;
@@ -195,10 +195,30 @@ h2 {
   border-radius: 8px;
   background-color: rgb(218, 218, 218);
 }
-
+.register-form-background .Auth-form {
+  width: 960px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+}
+.register-name-flex-control input {
+  width: calc(300px - 15px);
+}
+.register-flex-control input,
+.register-flex-control select {
+  width: calc(450px - 15px);
+}
+.register-name-flex-control,
+.register-flex-control {
+  display: flex;
+  justify-content: space-between;
+}
 .Auth-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .Auth-form-title {
@@ -214,7 +234,10 @@ label {
   font-weight: 600;
   color: rgb(34, 34, 34);
 }
-
+.register-form-background {
+  margin: 0;
+  padding: 0;
+}
 .form-background {
   margin: 0;
   padding: 0;
@@ -310,7 +333,31 @@ label {
 .popup-top {
   display: flex;
 }
-
+.popup-top-user {
+  display: flex;
+  margin: 0px;
+  height: 62px;
+  align-content: center;
+  justify-content: center;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.popup-top-request {
+  display: flex;
+  margin: 0px;
+  padding: 0 0 20px 0;
+  border-radius: 10px 10px 0 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
 .popup-top {
   margin: 0px;
   height: 62px;
@@ -630,8 +677,8 @@ form .leave-form .reason-field {
   background: #1b4ea3;
 }
 
-form input[type="radio"] {
-  /* display: none; */
+form .leave-form input[type="radio"] {
+  display: none;
 }
 
 .form-container form .button1 {
@@ -935,10 +982,17 @@ h4 {
 }
 
 .leave-profile-lists p,
-.user-profile p {
+.user-profile p,
+.user-profiles p {
   margin: 0;
 }
-
+.user-profiles {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
 .user-profile {
   position: absolute;
   top: 0;
@@ -1144,4 +1198,59 @@ form .user-form .user-input-box {
 }
 .user-input-box input:read-only {
   background-color: #f8f8f8 !important;
+}
+.content-main .content-main-card {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 44px;
+  overflow: hidden;
+}
+
+.content-main .content-main-card li {
+  list-style: none;
+  display: inline-block;
+  background-color: #ffffff;
+  min-width: calc(100% / 2 - 12px);
+  white-space: normal;
+  margin-top: 24px;
+  margin-right: 24px;
+  border-radius: 10px;
+  height: auto;
+}
+
+.content-main ul li:nth-child(2) {
+  clear: left;
+}
+.button-align-design {
+  margin-top: 18px;
+  justify-content: space-between;
+}
+.button-design-all {
+  width: calc(100% / 2 - 14px);
+  margin-right: 14px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 10px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+ 
+}
+.button-design-approve{
+  background: #10ac58;
+  color: #ffffff;
+  border: none;
+}
+.button-design-reject{
+  border: 2px solid #F34137;
+  color: #F34137;
+  background: #ffffff;
 }

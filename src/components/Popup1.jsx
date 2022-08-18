@@ -2,7 +2,7 @@ import React from 'react'
 import toggle1 from './Toggle1';
 const Popup1 = () => {
     return (
-        <div>
+        <>
             <div className='popup-top popup-colors1'>
                 <p>Pending Leave<i className='close-details' onClick={toggle1} class='bx bx-x'></i></p>
             </div>
@@ -16,7 +16,7 @@ const Popup1 = () => {
                 </div>
                 <button type="button" class="button-design">Delete Leave Request</button>
             </div>
-        </div>
+        </>
     )
 }
 

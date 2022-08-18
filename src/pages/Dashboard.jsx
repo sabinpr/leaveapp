@@ -58,7 +58,7 @@ const Dashboard = () => {
           <td>{data.to}</td>
           <td>{data.timerange}</td>
           <td><span className={statusClass}>{data.status}</span></td>
-          <td><a className='view-details' href='/#' onClick={toggle}>View</a></td>
+          <td><a className='view-details' href='/dashboard/#' onClick={toggle}>View</a></td>
         </tr>
       );
     });

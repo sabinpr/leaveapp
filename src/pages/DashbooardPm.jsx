@@ -49,7 +49,7 @@ const DashboardPm = () => {
                     <td>Emma</td>
                     <td>Smith</td>
                     <td>07</td>
-                    <td><a className='view-details' href='/pm/#' onClick={toggle}>View</a></td>
+                    <td><a className='view-details' href='/admin/#' onClick={toggle}>View</a></td>
                 </tr>
             );
         });
@@ -124,7 +124,7 @@ const DashboardPm = () => {
                     <td>{data.to}</td>
                     <td>{data.timerange}</td>
                     <td><span className={statusClass}>{data.status}</span></td>
-                    <td><a className='view-details' href='/pm/#' onClick={toggle}>View</a></td>
+                    <td><a className='view-details' href='/admin/#' onClick={toggle}>View</a></td>
                 </tr>
             );
         });

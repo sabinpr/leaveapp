@@ -1,4 +1,5 @@
-import { API } from "../../config";
+// import { API } from "../../config";
+import {SERVER_URL} from '../../utils/constants';
 import axios from "axios";
 
 //USING AXIOS INSTEAD OF return fetch
@@ -7,12 +8,12 @@ export const login = async (user, setCredentials, navigate) => {
   // console.log(setCredentials);
   //user is the data we are sending
   return axios
-    .post(`${API}/users/login`, user)
+    .post(`${SERVER_URL}/users/login`, user)
     .then((res) => {
       // console.log(res.data);
       //TO SAVE TOKEN DATA IN LOCAL STORAGE
       localStorage.setItem("token", res.data.token);
-      navigate("/welcome");
+      navigate("/dashboard");
     })
     .catch((error) => {
       if (error.response.data.msg) {

@@ -10,8 +10,9 @@ import Apply from "./pages/Apply";
 import NoPage from "./pages/NoPage";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import AddUser from "./pages/AddUser";
 // import Register from "./pages/Register";
-import Registration from "./pages/Registration";
+// import Registration from "./pages/Registration";
 import Roles from "./components/Roles";
 // import Register from "./pages/Register";
 import LeaveRequest from "./pages/LeaveRequest";
@@ -21,19 +22,18 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/roles" element={<Roles />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="/dashboard" element={<Sidebar />}>
-            <Route index element={<Dashboard />} />
-            <Route path="apply" element={<Apply />} />
-            <Route path="profile" element={<Profile />} />
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/roles" element={<Roles />} />
+          {/* <Route path="/register" element={<Registration />} /> */}
+          <Route exact path="/dashboard" element={<Sidebar />}>
+            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/apply" element={<Apply />} />
+            <Route path="/dashboard/profile" element={<Profile />} />
           </Route>
-          <Route path="/pm" element={<SidebarPm />}>
+          <Route path="/admin" element={<SidebarPm />}>
             <Route index element={<DashboardPm />} />
-            <Route path="/pm/leave" element={<LeaveRequest/>} />
-            <Route path="/pm/apply" element={<Apply />} />
-            <Route path="/pm/profile" element={<Profile />} />
+            <Route path="/admin/leave" element={<LeaveRequest/>} />
+            <Route path="/admin/add" element={<AddUser />} />
           </Route>
           <Route path="*" element={<NoPage />} />
         </Routes>

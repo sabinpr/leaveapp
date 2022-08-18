@@ -1,49 +1,33 @@
 import React from "react";
-import { useField } from "formik";
+import { ErrorMessage, useField } from "formik";
 
 export const FormikCustomField = ({ label, ...props }) => {
-  const [field, meta, helpers] = useField(props);
-  // console.log("field", field);
-  // console.log("meta", meta);
-  // console.log("helpers", helpers);
+  const [field, meta] = useField(props);
   return (
-    <>
-      <label>{label}</label>
+    <div className="mb-3">
+      <label htmlFor={field.name}>{label}</label>
       <input
-        {...field}
-        {...props}
-        className={meta.touched && meta.error ? "input-error" : ""}
-      />
-      {meta.touched && meta.error && <p className="error">{meta.error}</p>}
-    </>
+        className={`form-control shadow-none ${meta.touched && meta.error && 'is-invalid'}`}
+          {...field} {...props}
+          autoComplete="off"
+        />
+        <ErrorMessage component="div" name={field.name} className="error" />
+    </div>
   );
 };
 
 export const FormikCustomSelect = ({ label, ...props }) => {
-  const [field, meta, helpers] = useField(props);
+  const [field, meta, ] = useField(props);
   return (
-    <>
-      <label>{label}</label>
+    <div className="mb-3">
+      <label htmlFor={field.name}>{label}</label>
       <select
-        {...field}
-        {...props}
-        className={meta.touched && meta.error ? "input-error" : ""}
+        className={`form-control shadow-none ${meta.touched && meta.error && 'is-invalid'}`}
+          {...field} {...props}
+          autoComplete="off"
       />
       {meta.error && meta.touched && <p className="error">{meta.error}</p>}
-    </>
+    </div>
   );
 };
 
-export const FormikCustomRadio = ({label, ...props }) => {
-  const [field, meta, helpers, option] = useField(props);
-  return (
-    <>
-      <input
-        {...field}
-        {...props}
-        className={meta.touched && meta.error ? "input-error" : ""}
-      />
-      {meta.error && meta.touched && <p className="error">{meta.error}</p>}
-    </>
-  );
-};
