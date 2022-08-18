@@ -1,6 +1,7 @@
+import { API } from "../../config";
 import axios from "axios";
-import React from "react";
 
+//GET ALL ROLES FOR NEW USER ADDITION
 export const allRole = async () => {
   return axios
     .get(`${API}/roles/allRole`, {

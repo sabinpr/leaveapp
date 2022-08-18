@@ -38,6 +38,7 @@ export const isAuthenticated = () => {
   }
 };
 
+//SIGNOUT
 export const logout = async (navigate) => {
   localStorage.clear();
   navigate("/");
