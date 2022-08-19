@@ -8,7 +8,7 @@ const LeaveReminder = () => {
     const result = await getFutureLeaves();
     setLeaveBalance(result);
   }, []);
-  console.log(leaveBalance);
+  // console.log(leaveBalance);
   return (
     <div className="leave-reminder">
       <h3>Leave Remainder</h3>
@@ -19,9 +19,7 @@ const LeaveReminder = () => {
               <li className="reminder-list-components" key={i}>
                 <i class="bx bxs-circle bx-orange"></i>
                 <div>
-                  {/* {
-                        req.user.role == "user"?"":<h4>{item.user.firstName}</h4>
-                    } */}
+                  
                   <h4>{item.user.firstName}</h4>
                   <h4>{item.leaveType}</h4>
                   On Leave from:

@@ -29,19 +29,19 @@ const SidebarPm = () => {
                     </div>
                     <ul className="nav-list-pm">
                         <li>
-                            <NavLink exact activeClassName="active" to="/admin" end>
+                            <NavLink exact activeClassName="active" to="/adminDashboard" end>
                                 <i className="bx bxs-dashboard"></i>
                                 <span className="links-name">Dashboard</span>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink exact activeClassName="active" to="/admin/leave">
+                            <NavLink exact activeClassName="active" to="/adminDashboard/userLeaves">
                                 <i class='bx bx-detail'></i>
                                 <span className="links-name">Leave Requests</span>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink exact activeClassName="active" to="/admin/add">
+                            <NavLink exact activeClassName="active" to="/adminDashboard/addUser">
                                 <i class="bx bxs-pencil"></i>
                                 <span className="links-name">Add User</span>
                             </NavLink>

@@ -15,39 +15,26 @@ export const FormFull = () => {
 
   const handleSubmit = async (e) => {
     console.log(leave);
-    try{
-     const response = await axios
-    .post(
-      `http://localhost:3003/leaves/leave/addLeave`,
-      {
-        leaveType: leave.leaveType,
-        startDate: leave.from,
-        endDate: leave.to,
-        reason:  leave.reason,
-        files: leave.uploadFile
-      },{headers: {"Authorization": `Bearer ${localStorage.getItem("token")}`}}
-    )
-    console.log(response.data, "this is response")
-    }catch(err){
-      console.log(err)
+    try {
+      const response = await axios.post(
+        `http://localhost:3003/leaves/addLeave`,
+        {
+          fullHalf: "full",
+          leaveType: leave.leaveType,
+          startDate: leave.from,
+          endDate: leave.to,
+          reason: leave.reason,
+        },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+      console.log(response.data, "this is response");
+      alert("New Leave added scessflly");
+    } catch (err) {
+      console.log(err.response.data);
     }
-    // await axios
-    // .post(
-    //   `http://localhost:3003/leaves/addLeave`,
-    //   {
-    //     leaveType: leave.leaveType,
-    //     startDate: leave.from,
-    //     endDate: leave.to,
-    //     reason:  leave.reason,
-    //     files: leave.uploadFile
-    //   }
-    // )
-    // .then((result) => {
-    //   console.log(result.data);
-    //   console.log(result.data.msg);
-    // });
-
-  }
+  };
   return (
     <div className="form-container">
       <form action="#" onSubmit={handleSubmit}>
@@ -55,55 +42,59 @@ export const FormFull = () => {
           <div className="select-type">
             <input
               type={"radio"}
-              value="Annual Leave"
+              value="annual"
               name="type"
               id="dot-1"
               required
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }>
-            </input>
+              }
+            ></input>
             <input
               type={"radio"}
-              value="Sick Leave"
-              name="type" id="dot-2"
+              value="sick"
+              name="type"
+              id="dot-2"
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }>
-
-            </input>
+              }
+            ></input>
             <input
               type={"radio"}
-              value="Emergency Leave"
+              value="emergency"
               name="type"
               id="dot-3"
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }></input>
+              }
+            ></input>
             <input
               type={"radio"}
-              value="Bereavement Leave"
+              value="bereavement"
               name="type"
               id="dot-4"
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }></input>
+              }
+            ></input>
             <input
               type={"radio"}
-              value="Personal Leave"
+              value="personal"
               name="type"
               id="dot-5"
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }></input>
+              }
+            ></input>
             <input
               type={"radio"}
-              value="Casual Leave"
+              value="casual"
               name="type"
               id="dot-6"
               onChange={(e) =>
                 setLeave({ ...leave, leaveType: e.target.value })
-              }></input>
+              }
+            ></input>
             <span className="details">Leave Type</span>
             <div className="type-category">
               <label for="dot-1">
@@ -139,21 +130,15 @@ export const FormFull = () => {
             <input
               type={"date"}
               required
-              onChange={(e) =>
-                setLeave({ ...leave, from: e.target.value })
-              }>
-
-            </input>
+              onChange={(e) => setLeave({ ...leave, from: e.target.value })}
+            ></input>
           </div>
           <div className="input-box">
             <span className="details">To</span>
             <input
               type={"date"}
-              onChange={(e) =>
-                setLeave({ ...leave, to: e.target.value })
-              }>
-
-            </input>
+              onChange={(e) => setLeave({ ...leave, to: e.target.value })}
+            ></input>
           </div>
           <div className="input-file">
             <span className="details">Upload File</span>
@@ -169,10 +154,10 @@ export const FormFull = () => {
           </div>
           <div className="reason-field">
             <span className="details">Reason</span>
-            <textarea required
-              onChange={(e) =>
-                setLeave({ ...leave, reason: e.target.value })
-              }></textarea>
+            <textarea
+              required
+              onChange={(e) => setLeave({ ...leave, reason: e.target.value })}
+            ></textarea>
           </div>
         </div>
         <div className="button1">

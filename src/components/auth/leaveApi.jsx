@@ -35,9 +35,45 @@ export const getFutureLeaves = async () => {
     const comingLeaves = await axios.get(`${API}/leaves/leave/coming/leaves`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-    console.log("comingLeaves", comingLeaves.data.leaves);
+    // console.log("comingLeaves", comingLeaves.data.leaves);
     return comingLeaves.data.leaves;
   } catch (error) {
     console.log(error.response.data.msg);
+  }
+};
+
+//DELETE LEAVE ACTION FOR ADMIN
+export const deleteLeavesAction = async (id) => {
+  try {
+    const token = localStorage.getItem("token");
+    const removeLeaves = await axios.delete(
+      `${API}/leaves/deleteLeaves/${id}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    return true;
+  } catch (error) {
+    console.log(error.response.data.msg);
+    return false;
+  }
+};
+
+//UPDATE LEAVE ACTION FOR ADMIN
+export const updateLeavesAction = async (id, data) => {
+  try {
+    const token = localStorage.getItem("token");
+    // console.log("updatelkasjd", token);
+    const changeLeaves = await axios.put(
+      `${API}/leaves/updateLeave/${id}`,
+      data,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    return changeLeaves.data.leaves;
+  } catch (error) {
+    console.log(error.response.data.msg);
+    return false;
   }
 };

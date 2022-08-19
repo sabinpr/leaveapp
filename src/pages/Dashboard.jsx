@@ -23,6 +23,7 @@ const Dashboard = () => {
   useEffect(async () => {
     const result = await getLeaveBalance();
     //  console.log(result);
+    if(result)
     setLeaveBalance(result);
   }, []);
   const displayDatas = datas
@@ -125,6 +126,15 @@ const Dashboard = () => {
                             )}
                           </td>
                           <td>{item.status}</td>
+                          {/* <td>
+                            <a
+                              className="view-details"
+                              href="/dashboard/#"
+                              onClick={toggle}
+                            >
+                              View
+                            </a>
+                          </td> */}
                         </tr>
                       );
                     })}

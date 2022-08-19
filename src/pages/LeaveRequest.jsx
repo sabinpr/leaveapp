@@ -16,12 +16,6 @@ const LeaveRequest = () => {
                         <li>
                             <RequestsAll />
                         </li>
-                        <li>
-                            <RequestsAll />
-                        </li>
-                        {/* <li>
-                            <RequestsAll />
-                        </li> */}
                     </ul>
 
                 </div>
